@@ -1,14 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  const [count, setCount] = useState(0);
+
+  const handleAppClick =  () =>  {
+    setCount(count+1);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="App-header" onClick={handleAppClick}>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Clicked {count}x!
         </p>
         <a
           className="App-link"
