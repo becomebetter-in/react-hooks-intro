@@ -8,15 +8,7 @@ class CounterWithClass extends React.Component {
           count: 0
         }
       }
-
-    inc() {
-      this.setState({count: this.state.count+1})
-    } 
-
-    dec() {
-      this.setState({count: this.state.count-1})
-    } 
-
+      
     render () {
       return (
         <div>
@@ -24,8 +16,8 @@ class CounterWithClass extends React.Component {
           Clicked {this.state.count}x!
         </p>
         <p>
-          <button onClick={() => this.inc()}>Increment</button>
-          <button onClick={() => this.dec()}>Decrement</button>
+          <button onClick={() => this.setState({count: this.state.count+1})}>Increment</button>
+          <button onClick={() => this.setState({count: this.state.count-1})}>Decrement</button>
         </p>
     </div>
       );
