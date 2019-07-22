@@ -1,31 +1,14 @@
-import React, {useState} from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
+import CounterWithClass from './CounterWithClass'
+import CounterWithHooks from './CounterWithHooks'
+
 function App() {
-
-  const [count, setCount] = useState(0);
-
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Clicked {count}x!
-        </p>
-        <p>
-          <button onClick={() => setCount(count+1)}>Increment</button>
-          <button onClick={() => setCount(count-1)}>Decrement</button>
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <CounterWithClass/>
+        <CounterWithHooks/>
     </div>
   );
 }
