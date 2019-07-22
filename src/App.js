@@ -8,10 +8,14 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header" onClick={() => setCount(count+1)}>
+      <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Clicked {count}x!
+        </p>
+        <p>
+          <button onClick={() => setCount(count+1)}>Increment</button>
+          <button onClick={() => setCount(count-1)}>Decrement</button>
         </p>
         <a
           className="App-link"
