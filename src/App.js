@@ -1,14 +1,14 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
 
-import CounterWithClass from './CounterWithClass'
-import CounterWithHooks from './CounterWithHooks'
+import CounterWithClass from "./CounterWithClass";
+import CounterWithHooks from "./CounterWithHooks";
 
 function App() {
   return (
     <div className="App">
-        <CounterWithClass/>
-        <CounterWithHooks/>
+      <CounterWithClass />
+      <CounterWithHooks />
     </div>
   );
 }
