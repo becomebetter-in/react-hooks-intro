@@ -6,13 +6,9 @@ function App() {
 
   const [count, setCount] = useState(0);
 
-  const handleAppClick =  () =>  {
-    setCount(count+1);
-  }
-
   return (
     <div className="App">
-      <header className="App-header" onClick={handleAppClick}>
+      <header className="App-header" onClick={() => setCount(count+1)}>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Clicked {count}x!
